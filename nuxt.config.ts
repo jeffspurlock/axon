@@ -10,6 +10,13 @@ export default defineNuxtConfig({
       anchorLinks: false
     }
   },
+  vite: {
+    server: {
+      hmr: {
+        overlay: false
+      }
+    }
+  },
   svgo: {
     defaultImport: 'component',
     svgoConfig: {

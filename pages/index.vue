@@ -1,6 +1,10 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'homepage'
+})
 const router = useRouter()
-const props = defineProps(['content', 'selected'])
+import { useHomepageStore } from '#imports';
+const content = useHomepageStore()
 function routeToChild(path){
   router.push("/services"+path)
 }

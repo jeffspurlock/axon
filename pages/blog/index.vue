@@ -1,4 +1,5 @@
-<script setup>
+<script setup lang="ts">
+
 const blogs = await queryContent('services').find()
 console.log(blogs)
 </script>

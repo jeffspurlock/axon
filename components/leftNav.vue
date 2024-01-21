@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps(['content'])
+const content = useHomepageStore()
 const route = useRoute()
 const router = useRouter()
 const selected = ref(route.params.id)
