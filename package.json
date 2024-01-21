@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@stylexjs/stylex": "^0.3.0",
+    "nuxt": "^3.9.1",
+    "nuxt-svgo": "^4.0.0",
+    "vite-plugin-stylex": "^0.4.1",
+    "vite-plugin-stylex-dev": "^0.1.1",
+    "vue": "^3.4.10",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.10.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@stylexjs/rollup-plugin": "^0.4.1",
+    "graphql": "^16.8.1",
+    "pinia": "^2.1.7",
+    "villus": "^3.3.0"
+  }
+}

@@ -1,0 +1,6 @@
+# Vue.js
+When your company needs to support mobile apps as well as a web interface, you shouldn't be building a traditional website. You mobile apps are already being serviced by APIs to both receive and serve content, so building a site with a dedicated back end creates unnecessary cost, and data concurrency issues. 
+
+Single Page Applications (SPAs) grew out of a need. Tech companies like Google and Meta increasingly found themselves in situations where their website needed to function more like a mobile app, with a single back end architecture running all potential UI's. Creating the SPA design pattern allows developers to follow the Separation of Concerns principle, and decouple your user interface with backend logic, allowing several different UI's (Web App, iOS app, Android app, native desktop application) to communicate and work with a single back infrastructure.
+
+Instead of having two backends, leverage your existing backend architecture and let us build you a web based UI using a Single Page Application design pattern. All content will come from your existing infrastructure, and changes made via the web or an app will affect the same databases and services running your organization. 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233.43 150.19">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x=".5" y=".5" width="232.43" height="149.19" rx="5.48" ry="5.48" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <circle cx="7.23" cy="5.39" r=".92" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <circle cx="10.18" cy="5.39" r=".92" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <circle cx="13.14" cy="5.39" r=".92" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <line x1=".5" y1="9.56" x2="232.93" y2="9.56" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <rect x="4.05" y="82.11" width="53.28" height="63.83" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <rect x="61.33" y="82.11" width="53.28" height="63.83" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <rect x="118.62" y="82.11" width="53.28" height="63.83" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <rect x="175.9" y="82.11" width="53.28" height="63.83" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+      <rect x="10.18" y="12.39" width="210.09" height="65.59" fill="none" stroke="#fffef6" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>
