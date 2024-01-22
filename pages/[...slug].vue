@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const leftNav = resolveComponent('leftNav')
-const props = defineProps(['overflow'])
 const emit = defineEmits(['mounted', 'navSelector'])
 onMounted(() => {
     emit('mounted')
@@ -13,7 +12,7 @@ onMounted(() => {
         <Transition>
             <Suspense>
                 <div class="overflow">
-                    <ContentDoc class="content-doc"/>
+                    <ContentDoc class="content-doc" />
                     <div class="bumper"></div>
                 </div>
             </Suspense>

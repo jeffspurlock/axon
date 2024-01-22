@@ -16,7 +16,11 @@ onMounted(() => {
     </Suspense>
 </template>
 <style scoped>
-.bumper {
-    height: 100px;
+.body:deep(h3){
+    font-size:1.5em;
+}
+.body:deep(h6) {
+    margin: 0;
+    font-size: 1em;
 }
 </style>

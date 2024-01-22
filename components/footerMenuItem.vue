@@ -1,11 +1,12 @@
 <script setup lang="ts">
+const router = useRouter()
 const props = defineProps(['item'])
 </script>
 
 <template>
-    <NuxtLink class="footer-menu-link" :to="'/'+item.link">
-      {{ item.label }}
-    </NuxtLink>
+  <NuxtLink class="footer-menu-link" :href="'/' + item.link">
+    {{ item.label }}
+  </NuxtLink>
 </template>
 
 <style scoped>
@@ -16,13 +17,12 @@ const props = defineProps(['item'])
   font-size: 1em;
   color: var(--off-white);
   text-align: center;
-  
+
 }
 
-.footer-menu-link:hover{
+.footer-menu-link:hover {
   color: var(--goldenrod);
   transform: scale(1.2);
   transition: all .3s ease-in-out;
 }
-
 </style>
