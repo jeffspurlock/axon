@@ -32,9 +32,8 @@ function emitRouteToParent() {
 <style scoped>
 .block {
   flex-grow: 1;
-  width: 21vw;
-  min-width: 160px;
-  height: 19vw;
+  width: 24%;
+  height: 37vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -50,38 +49,20 @@ function emitRouteToParent() {
   bottom: 1vw;
 }
 
-#block-development {
+#block-development, #block-node {
   border-left: none;
 }
-
-#block-microservices {
-  svg {
-
-  }
-}
-
-#block-node {
-  border-left: none;
-  border-bottom: solid 1px var(--off-white);
-}
-
-#block-shopify {
+#block-shopify, #block-marketing {
   border-right: none;
 }
 
-#block-marketing {
-  border-right: none;
-  border-bottom: solid 1px var(--off-white);
+#block-development, #block-uiux, #block-microservices, #block-shopify {
+  border-top: none;
 }
 
-#block-vue {
-  border-bottom: solid 1px var(--off-white);
+#block-node, #block-nuxt, #block-vue, #block-marketing {
+  border-bottom: none;
 }
-
-#block-nuxt {
-  border-bottom: solid 1px var(--off-white);
-}
-
 .block h2 {
   text-align: center;
   position: relative;

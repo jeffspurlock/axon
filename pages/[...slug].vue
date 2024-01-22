@@ -12,7 +12,10 @@ onMounted(() => {
     <main>
         <Transition>
             <Suspense>
-                <ContentDoc class="content-doc" :class="overflow ? 'overflow' : ''"/>
+                <div class="overflow">
+                    <ContentDoc class="content-doc"/>
+                    <div class="bumper"></div>
+                </div>
             </Suspense>
         </Transition>
     </main>

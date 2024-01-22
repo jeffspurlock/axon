@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <NuxtLayout />
-  </div>
+    <frame>
+      <Transition name="layout" mode="out-in">
+        <NuxtLayout />
+      </Transition>
+    </frame>
 </template>
 <style>
 @import url("~/assets/css/style.css");

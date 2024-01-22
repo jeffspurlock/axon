@@ -1,11 +1,14 @@
 <script setup lang="ts">
+definePageMeta({
+    layout: "default"
+})
+
 const leftNav = resolveComponent('leftNav')
 const nav = ref(leftNav)
 const pagesWithOverflow = ['/about']
 const route = useRoute()
 let overflow: Ref<boolean> = ref(false)
 function setOverflow(){
-    console.log("Mounted Received")
     if(pagesWithOverflow.includes(route.fullPath)){
         overflow.value = true
     } else {
@@ -17,7 +20,6 @@ function setOverflow(){
 
 
 <template>
-    <HeaderComponent />
     <div class="layout-wrapper">
         <div class="container-lhn">
             <Transition name="nav" mode="out-in">
@@ -35,16 +37,14 @@ function setOverflow(){
             :overflow="overflow"
             />
         </div>
-
     </div>
-    <FooterComponent />
 </template>
 <style scoped>
 .layout-wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: 650px;
+    min-height: 73vh
 }
 .container-lhn{
     width:20vw;

@@ -14,6 +14,8 @@ const copywrite: string = "© 2024 Axon Development Studios. All Rights Reserved
 <style scoped>
 .footer {
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 .footer .copywrite {
   color: white;

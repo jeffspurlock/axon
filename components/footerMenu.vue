@@ -33,7 +33,7 @@ const links: Array<Object> = [
 .footer-nav {
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 50%;
   margin: 25px auto;
   justify-content: center;
 }

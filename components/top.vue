@@ -12,12 +12,12 @@ import logo from "./svg/axon.svg";
 </template>
 <style scoped>
 .logo {
-  height: 6vw;
+  height: 75px;
   position: relative;
-  right: 2.5vw;
+  right: 20px;
   width: 100%;
   text-align: right;
-  padding: 1vw;
+  padding: 8px;
 }
 .logo svg {
   height: 100%;
