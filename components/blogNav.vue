@@ -9,13 +9,15 @@ blogs.forEach((blogPost) => {
   <div class="blogNav">
     <h3>Recent Posts</h3>
     <ul class="recent">
-      <li class="li-blog" v-for="blogPost in blogs"><NuxtLink :to="blogPost._path">{{blogPost.title}}</NuxtLink></li>
+      <li class="li-blog" v-for="blogPost in blogs">
+        <NuxtLink :to="blogPost._path">{{ blogPost.title }}</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
 
 <style scoped>
-.blogNav{
+.blogNav {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
@@ -24,11 +26,13 @@ blogs.forEach((blogPost) => {
   justify-content: flex-start;
   border-right: 1px solid var(--off-white);
 }
-.blogNav h3{
+
+.blogNav h3 {
   font-size: 1.5em;
   color: var(--goldenrod);
   margin-block-start: 2.3em;
 }
+
 .blogNav ul {
   margin-block-start: 0;
 }

@@ -186,7 +186,7 @@ button:focus-visible {
 .layout-enter-from,
 .layout-leave-to {
   opacity: 0;
-  filter: blur(100px);
+  filter: blur(10px);
 }
 
 .nav-enter-active,

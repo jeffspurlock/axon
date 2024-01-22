@@ -4,11 +4,7 @@ const content = useHomepageStore()
 
 <template>
   <div class="left-hand-nav">
-    <listMenuItem
-      v-for="item in content.blocks"
-      class="icon"
-      :item="item"
-    />
+    <listMenuItem v-for="item in content.blocks" class="icon" :item="item" />
   </div>
 </template>
 <style scoped>
