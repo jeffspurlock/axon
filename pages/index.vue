@@ -6,7 +6,7 @@ const router = useRouter()
 import { useHomepageStore } from '#imports';
 const content = useHomepageStore()
 function routeToChild(path){
-  router.push("/services"+path)
+  router.push(path)
 }
 </script>
 <template>

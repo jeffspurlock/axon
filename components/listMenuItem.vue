@@ -1,40 +1,33 @@
 <script setup lang="ts">
-const route = useRoute()
-
+const data = useHomepageStore()
 const props = defineProps(["item", "index"]);
-const emit = defineEmits(["item-clicked"]);
-const selected = (function(){
-  if(props.item.id === route.params.id){
-    return true
-  } else {
-    return false
-  }
-})()
-const active: Ref<boolean> = ref(selected);
-function emitRouteToChild() {
-  let destination = props.item.link
-  emit("item-clicked", destination);
+const router = useRouter()
+const active: Ref<boolean> = ref(false);
+function routeToChild(){
+  data.setSelected(props.item.link)
+  router.push(props.item.link)
 }
 </script>
+
 
 <template>
   <div 
     class="menu-item"
-    :class="selected ? 'selected': ''"
+    :class="item.selected ? 'selected': ''"
     @mouseover="active = true"
     @mouseleave="active = false"
-    @click="emitRouteToChild"
+    @click.stop="routeToChild"
     >
     <Suspense>
       <icon 
         :fileName="item.img"
         :active="active"
-        :selected="selected"
+        :selected="item.selected"
         :id="item.id"
         :size="'sm'"
       />
     </Suspense>
-    <span :class="active || selected ? 'hover' : ''" class="item-label">{{ item.title }}</span>
+    <span :class="active || item.selected ? 'hover' : ''" class="item-label">{{ item.title }}</span>
   </div>
 </template>
 
@@ -52,6 +45,7 @@ function emitRouteToChild() {
 .menu-item >>> .svg-wrapper{
   width: 35px;
   margin: 0 20px 0 3vw;
+  display: inline-table;
 }
 
 span.hover {

@@ -1,6 +1,3 @@
-import { defineStore } from "pinia";
-import { ref } from "vue";
-
 export const useHomepageStore = defineStore("data", {
   state: () => ({
     blocks: [
@@ -9,8 +6,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Web Development",
         img: "code",
         alt: "Image of characters: </>",
-        link: "/development",
-        body: "webdevelopment",
+        link: "/services/development/",
         selected: false
       },
       {
@@ -18,8 +14,7 @@ export const useHomepageStore = defineStore("data", {
         title: "UI/UX Design",
         img: "design",
         alt: "Line drawing of a browser window and page layout",
-        link: "/design",
-        body: "",
+        link: "/services/design/",
         selected: false
       },
       {
@@ -27,8 +22,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Microservices",
         img: "lambda",
         alt: "AWS Lambda Logo",
-        link: "/microservices",
-        body: "",
+        link: "/services/microservices/",
         selected: false
       },
       {
@@ -36,8 +30,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Shopify",
         img: "shopify",
         alt: "Shopify Logo",
-        link: "/shopify",
-        body: "",
+        link: "/services/shopify/",
         selected: false
       },
       {
@@ -45,8 +38,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Node.js",
         img: "node",
         alt: "Node.js logo",
-        link: "/node",
-        body: "",
+        link: "/services/node/",
         selected: false
       },
       {
@@ -54,8 +46,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Vue.js",
         img: "vue",
         alt: "Vue.js logo",
-        link: "/vue",
-        body: "",
+        link: "/services/vue/",
         selected: false
       },
       {
@@ -63,8 +54,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Nuxt.js",
         img: "nuxt",
         alt: "Nuxt.js logo",
-        link: "/nuxt",
-        body: "",
+        link: "/services/nuxt/",
         selected: false
       },
       {
@@ -72,23 +62,22 @@ export const useHomepageStore = defineStore("data", {
         title: "Digital Marketing",
         img: "marketing",
         alt: "Logos for Facebook, Google Ads, and Bing Ads",
-        link: "/marketing",
-        body: "",
+        link: "/services/marketing/",
         selected: false
       }
     ]
   }),
   actions: {
-    getServiceContent( service: String){
-      var activeService = () => {
-        this.blocks.forEach((block) => {
-          if(block.id == service){
-            return block
-          } 
+    setSelected(activeRoute: string){
+      console.log(activeRoute)
+      this.blocks.forEach((block) => {
+        if(block.link == activeRoute){
+          console.log("Success: " + block.link)
+          block.selected = true
+        } else {
+          block.selected = false
         }
-        )
-      }
-      return activeService
+      })
     }
   }
 })

@@ -1,6 +1,6 @@
 # Nuxt.js
 Nuxt has quickly become my favorite development framework. The built in tools like automatic module import, automatic routing, Nuxt content for Markdown support, JS and TS support, and more out of the box features, mean less configuration and fewer potential failure points. 
 
-As a node.js framework, Nuxt benefits from the Conintous Deployment workflows supported by popular hosting environments like Heroku, Netlify, and Vercel. Publishing updates is as simple as pushing to a release branch in GitHub. Quick deployment, easy version control, and fast server resopnse times means your site will be highly performant, and flexible enough to manage content and code changes quickly. 
+As a node.js framework, Nuxt benefits from the Continuous Deployment workflows supported by popular hosting environments like Heroku, Netlify, and Vercel. Publishing updates is as simple as pushing to a release branch in GitHub. Quick deployment, easy version control, and fast server response times means your site will be highly performant, and flexible enough to manage content and code changes quickly. 
 
 Speaking of content changes, the previously mentioned Markdown support with Nuxt Content makes content creation a breeze for your marketing team. Deployed as part of your Git repository, version control on blog posts or page content will be tracked alongside code changes. Adding or editing content is as simple as modifying the .md file, with an easy to use syntax requiring zero technical skills. 

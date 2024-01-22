@@ -1,11 +1,5 @@
 <script setup lang="ts">
 const content = useHomepageStore()
-const route = useRoute()
-const router = useRouter()
-const selected = ref(route.params.id)
-function routeToChild(destination: string){
-  router.push("/services"+destination)
-}
 </script>
 
 <template>
@@ -14,8 +8,6 @@ function routeToChild(destination: string){
       v-for="item in content.blocks"
       class="icon"
       :item="item"
-      :selected="selected"
-      @item-clicked="routeToChild"
     />
   </div>
 </template>
@@ -23,7 +15,8 @@ function routeToChild(destination: string){
 .left-hand-nav {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin: auto 0;
+  margin: auto;
+  height: 100%;
+  justify-content: center;
 }
 </style>

@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import icon from "./icon.vue";
+const data = useHomepageStore();
 const props = defineProps(["block"]);
 const emit = defineEmits(["clicked"]);
 const active: Ref<boolean> = ref(false);
 function emitRouteToParent() {
+  data.setSelected(props.block.link)
   emit("clicked", props.block.link);
 }
 </script>
