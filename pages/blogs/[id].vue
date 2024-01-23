@@ -1,10 +1,9 @@
 <script setup>
-const blogNav = resolveComponent('blogNav')
 const emit = defineEmits(['navSelector'])
+const blogNav = resolveComponent('blogNav')
 onMounted(() => {
     emit('navSelector', blogNav)
 })
-
 </script>
 <template>
     <div class="body overflow">

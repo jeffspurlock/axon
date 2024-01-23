@@ -1,10 +1,16 @@
 <script setup lang="ts">
-const leftNav = resolveComponent('leftNav')
+const route = useRoute()
 const data = useHomepageStore()
+const leftNav = resolveComponent('leftNav')
 data.blocks.forEach((block) => {
     block.selected = false
 })
-const emit = defineEmits(['mounted', 'navSelector'])
+const docId = ref()
+const contentDoc = await queryContent('/').where({ _path: route.fullPath }).find()
+const emit = defineEmits(['mounted', 'navSelector', "docId"])
+if (contentDoc[0].docId != undefined) {
+    docId.value = contentDoc[0].docId
+}
 onMounted(() => {
     emit('mounted')
     emit('navSelector', leftNav)
@@ -16,7 +22,7 @@ onMounted(() => {
         <Transition>
             <Suspense>
                 <div class="overflow">
-                    <ContentDoc class="content-doc" />
+                    <ContentDoc :id="contentDoc[0].docId" class="content-doc" />
                     <div class="bumper"></div>
                 </div>
             </Suspense>

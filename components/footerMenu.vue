@@ -2,27 +2,27 @@
 const links: Array<Object> = [
   {
     label: "Who We Are",
-    link: "/about/",
+    link: "/about",
     setSelected: false
   },
   {
     label: "What We Do",
-    link: "/services/development/",
+    link: "/services/development",
     setSelected: true
   },
   {
     label: "Blog",
-    link: "/blog/",
+    link: "/blog",
     setSelected: false
   },
   {
     label: "Privacy Policy",
-    link: "/privacy-policy/",
+    link: "/privacy",
     setSelected: false
   },
   {
     label: "Contact",
-    link: "/contact/",
+    link: "/contact",
     setSelected: false
   }
 ]

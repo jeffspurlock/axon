@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const contentId = ref()
 const leftNav = resolveComponent('leftNav')
 const nav = ref(leftNav)
 const pagesWithOverflow = ['/about']
@@ -10,6 +11,10 @@ function setOverflow() {
     } else {
         overflow.value = false
     }
+}
+function setDocId(docId: string) {
+    console.log("docId in set function = " + docId)
+    contentId.value = docId
 }
 </script>
 
@@ -24,7 +29,7 @@ function setOverflow() {
         </div>
         <div id="content-container" :class="overflow ? 'overflow' : ''">
             <NuxtPage class="body" :class="overflow ? 'overflow' : ''" @mounted="setOverflow"
-                @navSelector="(newNav) => { nav = newNav }" :overflow="overflow" />
+                @navSelector="(newNav) => { nav = newNav }" @docId="setDocId" :overflow="overflow" :id="contentId" />
         </div>
     </div>
 </template>

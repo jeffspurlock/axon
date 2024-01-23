@@ -2,11 +2,6 @@
 const data = useHomepageStore()
 const props = defineProps(['item'])
 function setSelectedItem() {
-  console.log(props.item.setSelected)
-  console.log(props.item.link)
-  data.blocks.forEach((block) => {
-    console.log(block.link)
-  })
   if (props.item.setSelected) {
     data.blocks.forEach((block) => {
       if (block.link == props.item.link) {

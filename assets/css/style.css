@@ -30,21 +30,21 @@
 
 @font-face {
   font-family: "Gotham";
-  src: url("../fonts/Gotham-font-family/Gotham\ ScreenSmart/GothamSSm-Medium.otf")
+  src: url("../fonts/Gotham-font-family/Gotham/Gotham-Medium.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("../fonts/Gotham-font-family/Gotham\ ScreenSmart/GothamSSm-Bold.otf")
+  src: url("../fonts/Gotham-font-family/Gotham/Gotham-Bold.otf")
     format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("../fonts/Gotham-font-family/Gotham\ ScreenSmart/GothamSSm-Book.otf")
+  src: url("../fonts/Gotham-font-family/Gotham/Gotham-Book.otf")
     format("opentype");
   font-weight: bolder;
   font-style: normal;
@@ -129,6 +129,52 @@ button:focus-visible {
 .body{
   height: 100%;
   overflow-y: scroll;
+}
+
+/* Content Doc Styling - Privacy */
+#privacy {
+  h1{
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+  h2{
+    font-size: 44px;
+    font-weight: normal;
+  }
+  h3{
+    font-size: 40px;
+  }
+  h4{
+    font-size: 28px;
+  }
+  h5{
+    font-size:  24px;
+  }
+  h6{
+    font-size: 14px;
+    margin: 0;
+    font-weight: lighter;
+  }
+  p {
+    font-size: 20px;
+  }
+  h3, h2, h5 {
+    color: var(--goldenrod)
+    /* TODO: create all priacy page styling */
+  }
+  h1, h2, h3 {
+    font-family: 'Ostrich'
+  }
+  h4, h5, h6, table {
+    font-family: 'Gotham'
+  }
+  table, th, td {
+    border: 1px solid var(--off-white);
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 12px;
+  }
 }
 
 
