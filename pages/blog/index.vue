@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const blogNav = resolveComponent('blogNav')
-const emit = defineEmits(['navSelector'])
-onMounted(() => {
-    emit('navSelector', blogNav)
-})
-
+useGlobalState().setNav('blognav')
 const blogs = await queryContent('blogs').find()
 
 //TODO: create the blogCard component

@@ -5,19 +5,14 @@ definePageMeta({
 const router = useRouter()
 import { useHomepageStore } from '#imports';
 const content = useHomepageStore()
-function routeToChild(path){
+function routeToChild(path) {
   router.push(path)
 }
 </script>
 <template>
   <section class="home-navigation">
     <Suspense>
-      <block
-        v-for="(block, index) in content.blocks"
-        :block="block"
-        :index="index"
-        @clicked="routeToChild"
-      />
+      <block v-for="(block, index) in content.blocks" :block="block" :index="index" @clicked="routeToChild" />
     </Suspense>
   </section>
 </template>

@@ -18,12 +18,12 @@ const links: Array<Object> = [
   {
     label: "Privacy Policy",
     link: "/privacy",
-    setSelected: false
+    setSelected: true
   },
   {
     label: "Contact",
     link: "/contact",
-    setSelected: false
+    setSelected: true
   }
 ]
 

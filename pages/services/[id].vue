@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const leftNav = resolveComponent('leftNav')
-const emit = defineEmits(['mounted', 'navSelector'])
-onMounted(() => {
-    emit('mounted')
-    emit('navSelector', leftNav)
-})
+useGlobalState().setNav('leftnav')
 </script>
 
 <template>

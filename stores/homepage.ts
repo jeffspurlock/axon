@@ -6,7 +6,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Web Development",
         img: "code",
         alt: "Image of characters: </>",
-        link: "/services/development/",
+        link: "/services/development",
         selected: false
       },
       {
@@ -14,7 +14,7 @@ export const useHomepageStore = defineStore("data", {
         title: "UI/UX Design",
         img: "design",
         alt: "Line drawing of a browser window and page layout",
-        link: "/services/design/",
+        link: "/services/design",
         selected: false
       },
       {
@@ -22,7 +22,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Microservices",
         img: "lambda",
         alt: "AWS Lambda Logo",
-        link: "/services/microservices/",
+        link: "/services/microservices",
         selected: false
       },
       {
@@ -30,7 +30,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Shopify",
         img: "shopify",
         alt: "Shopify Logo",
-        link: "/services/shopify/",
+        link: "/services/shopify",
         selected: false
       },
       {
@@ -38,7 +38,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Node.js",
         img: "node",
         alt: "Node.js logo",
-        link: "/services/node/",
+        link: "/services/node",
         selected: false
       },
       {
@@ -46,7 +46,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Vue.js",
         img: "vue",
         alt: "Vue.js logo",
-        link: "/services/vue/",
+        link: "/services/vue",
         selected: false
       },
       {
@@ -54,7 +54,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Nuxt.js",
         img: "nuxt",
         alt: "Nuxt.js logo",
-        link: "/services/nuxt/",
+        link: "/services/nuxt",
         selected: false
       },
       {
@@ -62,7 +62,7 @@ export const useHomepageStore = defineStore("data", {
         title: "Digital Marketing",
         img: "marketing",
         alt: "Logos for Facebook, Google Ads, and Bing Ads",
-        link: "/services/marketing/",
+        link: "/services/marketing",
         selected: false
       }
     ]

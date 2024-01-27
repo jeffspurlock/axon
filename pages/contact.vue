@@ -3,14 +3,9 @@ import type { ModelRef } from 'vue';
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
 import { useFetch } from '@vueuse/core'
-const leftNav = resolveComponent('leftNav')
-const emit = defineEmits(['navSelector'])
-onMounted(() => {
-    emit('navSelector', leftNav)
-})
+useGlobalState().setNav('leftnav')
 
 //TODO: figure out how to send email
-//TODO: refactor form components to have main level component containing scoped classes for all form group itemsx
 const tomorrow = new Date(Date.now() + 86400000)
 const date = defineModel()
 class TextField {

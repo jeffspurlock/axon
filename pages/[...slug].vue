@@ -1,19 +1,18 @@
 <script setup lang="ts">
 const route = useRoute()
 const data = useHomepageStore()
-const leftNav = resolveComponent('leftNav')
+useGlobalState().setNav('leftnav')
 data.blocks.forEach((block) => {
     block.selected = false
 })
 const docId = ref()
 const contentDoc = await queryContent('/').where({ _path: route.fullPath }).find()
-const emit = defineEmits(['mounted', 'navSelector', "docId"])
+const emit = defineEmits(['mounted', "docId"])
 if (contentDoc[0].docId != undefined) {
     docId.value = contentDoc[0].docId
 }
 onMounted(() => {
     emit('mounted')
-    emit('navSelector', leftNav)
 })
 </script>
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
+const globalState = useGlobalState()
 const contentId = ref()
-const leftNav = resolveComponent('leftNav')
-const nav = ref(leftNav)
 const pagesWithOverflow = ['/about']
 const route = useRoute()
 let overflow: Ref<boolean> = ref(false)
@@ -23,13 +22,13 @@ function setDocId(docId: string) {
         <div class="container-lhn">
             <Transition name="nav" mode="out-in">
                 <Suspense>
-                    <component :is="nav"></component>
+                    <component :is="globalState.navSelector"></component>
                 </Suspense>
             </Transition>
         </div>
         <div id="content-container" :class="overflow ? 'overflow' : ''">
-            <NuxtPage class="body" :class="overflow ? 'overflow' : ''" @mounted="setOverflow"
-                @navSelector="(newNav) => { nav = newNav }" @docId="setDocId" :overflow="overflow" :id="contentId" />
+            <NuxtPage class="body" :class="overflow ? 'overflow' : ''" @mounted="setOverflow" @docId="setDocId"
+                :overflow="overflow" :id="contentId" />
         </div>
     </div>
 </template>

@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/content'
   ],
+  components: {
+    global: true,
+    dirs: ['~/components']
+  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
