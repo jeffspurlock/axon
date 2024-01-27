@@ -26,8 +26,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
 @font-face {
   font-family: "Gotham";
   src: url("../fonts/Gotham-font-family/Gotham/Gotham-Medium.otf")
@@ -129,6 +127,7 @@ button:focus-visible {
 .body{
   height: 100%;
   overflow-y: scroll;
+  scrollbar-color: var(--lt-grey) var(--dark-grey);
 }
 
 /* Content Doc Styling - Privacy */
