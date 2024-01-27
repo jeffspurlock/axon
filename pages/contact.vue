@@ -97,7 +97,7 @@ async function updateList() {
 
 <template>
     <Transition>
-        <div id="contact-page">
+        <div class="contact-page">
             <h1>Contact Us</h1>
             <h6>Please complete this form and someone will reachout to you within 24-48 hours</h6>
             <FormRoot @submission="updateList">
@@ -125,6 +125,10 @@ async function updateList() {
 </template>
 
 <style scoped>
+.contact-page {
+    margin-right: 10vw;
+}
+
 #datepicker {
     margin: -12px 0 10px;
 }
@@ -132,6 +136,8 @@ async function updateList() {
 #datepicker+div {
     margin: auto;
 }
+
+
 
 #datepicker:deep(input) {
     width: 100%;
@@ -147,6 +153,10 @@ async function updateList() {
 #datepicker:deep(.dp__input_icon) {
     right: 0;
     inset-inline-start: inherit;
+}
+
+#datepicker:deep(.dp__outer_menu_wrap) {
+    z-index: 100;
 }
 
 h6 {

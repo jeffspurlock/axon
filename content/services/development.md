@@ -1,5 +1,5 @@
 # Web Development
-My web development journey is mostly rooted in my childhood. Before i turned 10, my Father began teaching me how to build web site using Microsoft FrontPage. For those unfamiliar, this was a desktop application with a WYSIWYG editor, allowing you to build web pages the same way you might assemble a word document. It helped a lot for understanding some of the basic around page structure and HTML, but had lots of short comings; specifically when it came to CSS.
+My web development journey is mostly rooted in my childhood. Before I turned 10, my Father began teaching me how to build web site using Microsoft FrontPage. For those unfamiliar, this was a desktop application with a WYSIWYG editor, allowing you to build web pages the same way you might assemble a word document. It helped a lot for understanding some of the basic around page structure and HTML, but had lots of short comings; specifically when it came to CSS.
 
 I got frustrated, so I decided to learn CSS. When I was in Middle School and High School, I charged $5 to do custom styling for other students MySpace pages. Then I started building in WordPress. Didn't really know how to program much yet, but it was great introduction to the art form.
 
