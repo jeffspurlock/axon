@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import leftnav from "~/components/leftnav.vue"
-import blognav from "~/components/blognav.vue"
+import leftnav from "#imports"
+import blognav from "#imports"
 
 const globalState = useGlobalState()
 const { navSelector } = storeToRefs(globalState)
