@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useGlobalState().setNav('leftnav')
+useGlobalState().setNav('leftNav')
 </script>
 
 <template>

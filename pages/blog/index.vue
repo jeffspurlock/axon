@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useGlobalState().setNav('blognav')
+useGlobalState().setNav('blogNav')
 const blogs = await queryContent('blogs').find()
 
 //TODO: create the blogCard component

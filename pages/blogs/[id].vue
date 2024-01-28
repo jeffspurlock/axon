@@ -1,5 +1,5 @@
 <script setup>
-useGlobalState().setNav('blognav')
+useGlobalState().setNav('blogNav')
 </script>
 <template>
     <div class="body overflow">

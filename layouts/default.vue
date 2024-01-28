@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import leftnav from "#imports"
-import blognav from "#imports"
+import leftNav from "~/components/leftNav.vue"
+import blogNav from "~/components/blogNav.vue"
 
 const globalState = useGlobalState()
 const { navSelector } = storeToRefs(globalState)
@@ -21,11 +21,11 @@ function setDocId(docId: string) {
 }
 const navComponent = ref()
 function setNavComponent() {
-    if (navSelector.value == 'leftnav') {
-        navComponent.value = leftnav
+    if (navSelector.value == 'leftNav') {
+        navComponent.value = leftNav
     }
-    else if (navSelector.value == 'blognav') {
-        navComponent.value = blognav
+    else if (navSelector.value == 'blogNav') {
+        navComponent.value = blogNav
     }
 
 }
