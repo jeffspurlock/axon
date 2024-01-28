@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Leftnav from "~/components/leftnav.vue"
-import Blognav from "~/components/blognav.vue";
+import Leftnav from "~/components/Leftnav.vue"
+import Blognav from "~/components/Blognav.vue";
 
 const globalState = useGlobalState()
 const contentId = ref()
@@ -25,7 +25,7 @@ function setDocId(docId: string) {
         <div class="container-lhn">
             <Transition name="nav" mode="out-in">
                 <Suspense>
-                    <component :is="globalState.navSelector"></component>
+                    <component :is="globalState.nav"></component>
                 </Suspense>
             </Transition>
         </div>
