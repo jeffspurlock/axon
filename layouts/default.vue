@@ -25,7 +25,7 @@ function setDocId(docId: string) {
         <div class="container-lhn">
             <Transition name="nav" mode="out-in">
                 <Suspense>
-                    <component :is="navSelector"></component>
+                    <component :is="resolveComponent(navSelector)"></component>
                 </Suspense>
             </Transition>
         </div>
