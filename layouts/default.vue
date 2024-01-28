@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import leftnav from "~/components/Leftnav.vue"
+import eftnav from "~/components/leftnav.vue"
 import blognav from "~/components/Blognav.vue"
 
 const globalState = useGlobalState()
