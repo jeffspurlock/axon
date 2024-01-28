@@ -19,4 +19,4 @@ export const useGlobalState = defineStore("globalState", {
       }
     }
   }
-}) //TODO: finish refactoring for setNav globalstate action
+})
