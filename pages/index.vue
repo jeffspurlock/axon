@@ -5,7 +5,7 @@ definePageMeta({
 const router = useRouter()
 import { useHomepageStore } from '#imports';
 const content = useHomepageStore()
-function routeToChild(path) {
+function routeToChild(path: string) {
   router.push(path)
 }
 </script>
