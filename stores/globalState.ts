@@ -1,7 +1,4 @@
 import { defineStore } from "pinia";
-import  Leftnav  from "~/components/Leftnav.vue"
-import  Blognav  from "~/components/Block.vue"
-
 export const useGlobalState = defineStore("globalState", {
   state: () => ({
     themeProperties: {
@@ -11,16 +8,6 @@ export const useGlobalState = defineStore("globalState", {
     },
     navSelector: 'Leftnav'
   }),
-  getters: {
-    nav: (state) => { 
-      switch(state.navSelector){
-        case "Leftnav":
-          return Leftnav
-        case "Blognav":
-          return Blognav
-      }
-     }
-  },
   actions: {
     setLines(quantity: number ){
         this.themeProperties.linesTop = quantity;
