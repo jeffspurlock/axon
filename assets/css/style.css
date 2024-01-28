@@ -67,6 +67,7 @@
   --lt-grey: #d2d2cd;
   --off-white: #fffef6;
   --goldenrod: #cca644;
+  scrollbar-color: var(--dark-grey) var(--lt-grey);
 }
 
 a {

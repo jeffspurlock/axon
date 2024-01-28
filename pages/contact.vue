@@ -21,25 +21,11 @@ class TextField {
         this.placeholder = placeholder
     }
 }
-class DateField {
-    data: ModelRef<Date | undefined>
-    label: string
-    id: string
-
-    constructor(label: string, id: string) {
-        this.data = defineModel()
-        this.label = label
-        this.id = id
-    }
-
-}
-
 class FormData {
     fName: TextField
     lName: TextField
     email: TextField
     phoneNumber: TextField
-    preferredCallBack: DateField
     currentWebsiteUrl: TextField
     anythingElse: TextField
 
@@ -65,15 +51,11 @@ class FormData {
             "phnum",
             "1-555-867-5309"
         )
-        this.preferredCallBack = new DateField(
-            "Call Back Date and Time",
-            "callback"
-        ),
-            this.currentWebsiteUrl = new TextField(
-                "Website URL",
-                "url",
-                "antlers.com"
-            )
+        this.currentWebsiteUrl = new TextField(
+            "Website URL",
+            "url",
+            "antlers.com"
+        )
         this.anythingElse = new TextField(
             "Anything else we should know?",
             "else",
@@ -96,24 +78,23 @@ async function updateList() {
             <h1>Contact Us</h1>
             <h6>Please complete this form and someone will reachout to you within 24-48 hours</h6>
             <FormRoot @submission="updateList">
-                <FormInputWrapper :id="formData.fName.id" :label="formData.fName.label">
-                    <FormText :formElement="formData.fName" v-model="formData.fName.data" />
-                </FormInputWrapper>
-                <FormInputWrapper :id="formData.lName.id" :label="formData.lName.label">
-                    <FormText :formElement="formData.lName" v-model="formData.lName.data" />
-                </FormInputWrapper>
-                <FormInputWrapper :id="formData.email.id" :label="formData.email.label">
-                    <FormText :formElement="formData.email" v-model="formData.email.data" />
-                </FormInputWrapper>
-                <FormInputWrapper :id="formData.phoneNumber.id" :label="formData.phoneNumber.label">
-                    <FormText :formElement="formData.phoneNumber" v-model="formData.phoneNumber.data" />
-                </FormInputWrapper>
-                <FormInputWrapper :id="formData.currentWebsiteUrl.id" :label="formData.currentWebsiteUrl.label">
-                    <FormText :formElement="formData.currentWebsiteUrl" v-model="formData.currentWebsiteUrl.data" />
-                </FormInputWrapper>
-                <FormInputWrapper :id="formData.preferredCallBack.id" :label="formData.preferredCallBack.label">
-                    <Datepicker v-model="date" id="datepicker" :placeholder="tomorrow.toDateString()" dark />
-                </FormInputWrapper>
+                <div class="form-fields">
+                    <FormInputWrapper :id="formData.fName.id" :label="formData.fName.label">
+                        <FormText :formElement="formData.fName" v-model="formData.fName.data" />
+                    </FormInputWrapper>
+                    <FormInputWrapper :id="formData.lName.id" :label="formData.lName.label">
+                        <FormText :formElement="formData.lName" v-model="formData.lName.data" />
+                    </FormInputWrapper>
+                    <FormInputWrapper :id="formData.email.id" :label="formData.email.label">
+                        <FormText :formElement="formData.email" v-model="formData.email.data" />
+                    </FormInputWrapper>
+                    <FormInputWrapper :id="formData.phoneNumber.id" :label="formData.phoneNumber.label">
+                        <FormText :formElement="formData.phoneNumber" v-model="formData.phoneNumber.data" />
+                    </FormInputWrapper>
+                    <FormInputWrapper :id="formData.currentWebsiteUrl.id" :label="formData.currentWebsiteUrl.label">
+                        <FormText :formElement="formData.currentWebsiteUrl" v-model="formData.currentWebsiteUrl.data" />
+                    </FormInputWrapper>
+                </div>
             </FormRoot>
         </div>
     </Transition>
@@ -160,7 +141,7 @@ h6 {
     margin: 0 0 16px;
 }
 
-form {
+.form-fields {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
