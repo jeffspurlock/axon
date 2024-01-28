@@ -9,10 +9,17 @@ export const useGlobalState = defineStore("globalState", {
         linesBottom: 3,
         delay: 80
     },
-    navSelector: 'leftNav'
+    navSelector: 'Leftnav'
   }),
   getters: {
-    nav: (state) => { return resolveComponent(state.navSelector) }
+    nav: (state) => { 
+      switch(state.navSelector){
+        case "Leftnav":
+          return Leftnav
+        case "Blognav":
+          return Blognav
+      }
+     }
   },
   actions: {
     setLines(quantity: number ){

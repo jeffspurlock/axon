@@ -1,8 +1,6 @@
 <script setup lang="ts">
-/* import Leftnav from "~/components/Leftnav.vue"
-import Blognav from "~/components/Blognav.vue";
- */
 const globalState = useGlobalState()
+const { navSelector } = storeToRefs(globalState)
 const contentId = ref()
 const pagesWithOverflow = ['/about']
 const route = useRoute()
@@ -25,7 +23,7 @@ function setDocId(docId: string) {
         <div class="container-lhn">
             <Transition name="nav" mode="out-in">
                 <Suspense>
-                    <component :is="globalState.nav"></component>
+                    <component :is="navSelector"></component>
                 </Suspense>
             </Transition>
         </div>
