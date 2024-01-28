@@ -3,7 +3,7 @@ import type { ModelRef } from 'vue';
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
 import { useFetch } from '@vueuse/core'
-useGlobalState().setNav('leftnav')
+useGlobalState().setNav('Leftnav')
 
 //TODO: figure out how to send email
 const tomorrow = new Date(Date.now() + 86400000)

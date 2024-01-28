@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import Leftnav from "~/components/leftnav.vue"
-import Blognav from "~/components/blognav.vue"
+import { Leftnav } from "#build/components"
+import { Blognav } from "#build/components"
 
 export const useGlobalState = defineStore("globalState", {
   state: () => ({
