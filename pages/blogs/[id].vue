@@ -1,9 +1,5 @@
 <script setup>
-const emit = defineEmits(['navSelector'])
-const blogNav = resolveComponent('blogNav')
-onMounted(() => {
-    emit('navSelector', blogNav)
-})
+useGlobalState().setNav('blognav')
 </script>
 <template>
     <div class="body overflow">

@@ -2,7 +2,7 @@
 import type { ModelRef } from 'vue';
 import '@vuepic/vue-datepicker/dist/main.css';
 import { useFetch } from '@vueuse/core'
-useGlobalState().setNav('Leftnav')
+useGlobalState().setNav('leftnav')
 
 //TODO: figure out how to send email
 class TextField {

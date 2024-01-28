@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const data = useHomepageStore()
-useGlobalState().setNav('Leftnav')
+useGlobalState().setNav('leftnav')
 data.blocks.forEach((block) => {
     block.selected = false
 })

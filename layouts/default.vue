@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import leftnav from "~/components/Leftnav.vue"
 import blognav from "~/components/Blognav.vue"
+
 const globalState = useGlobalState()
 const { navSelector } = storeToRefs(globalState)
 const contentId = ref()
@@ -18,6 +19,20 @@ function setDocId(docId: string) {
     console.log("docId in set function = " + docId)
     contentId.value = docId
 }
+const navComponent = ref()
+function setNavComponent() {
+    if (navSelector.value == 'leftnav') {
+        navComponent.value = leftnav
+    }
+    else if (navSelector.value == 'blognav') {
+        navComponent.value = blognav
+    }
+
+}
+onMounted(() => setNavComponent())
+onUpdated(() => setNavComponent())
+
+
 </script>
 
 <template>
@@ -25,7 +40,7 @@ function setDocId(docId: string) {
         <div class="container-lhn">
             <Transition name="nav" mode="out-in">
                 <Suspense>
-                    <component :is="resolveComponent(navSelector)"></component>
+                    <component :is="navComponent"></component>
                 </Suspense>
             </Transition>
         </div>
