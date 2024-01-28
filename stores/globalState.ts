@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-import { ref } from "vue";
 import  Leftnav  from "~/components/Leftnav.vue"
 import  Blognav  from "~/components/Block.vue"
 

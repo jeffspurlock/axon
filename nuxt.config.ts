@@ -25,9 +25,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  build: {
-    transpile: ['@vuepic/vue-datepicker']
-  },
   svgo: {
     defaultImport: 'component',
     svgoConfig: {
