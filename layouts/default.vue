@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import Leftnav from "~/components/leftnav.vue"
+import Blognav from "~/components/blognav.vue";
+
 const globalState = useGlobalState()
 const contentId = ref()
 const pagesWithOverflow = ['/about']
